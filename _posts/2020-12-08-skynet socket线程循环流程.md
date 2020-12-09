@@ -4,7 +4,7 @@
 
 先来看看socket线程的循环函数：
 
-```skynet_socket.c
+```
 int 
 skynet_socket_poll() {
 	struct socket_server *ss = SOCKET_SERVER;
@@ -79,7 +79,7 @@ socket_server_poll函数比较长, 我们分几各部分来看。
 
 ### 一
 
-```skynet_socket.c
+```
 socket_server_poll(struct socket_server *ss, struct socket_message * result, int * more) {
 	if (ss->checkctrl) {
 		if (has_cmd(ss)) {
